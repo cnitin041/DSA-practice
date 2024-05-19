@@ -1,30 +1,24 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
-void sshort(int arr[],int size){
-    for(int i=0;i<size-1;i++){
-       if(arr[i]>arr[i+1]){
-        swap(arr[i],arr[i+1]);
-        i++;
-       }
-       else{
-        i++;
-       } 
+vector<int> rangee(int a, int b) {
+    vector<int> arr;
+    for (int i = a; i < b; i++) {
+        if (i % 2 == 0) {
+            arr.push_back(i);
+        }
     }
-    
+    for (int i = 0; i < arr.size(); i++) {
+        cout << arr[i] << endl;
+    }
+    return arr;
 }
-int main(){
-    int arr[3];
-    for(int i=0;i<3;i++){
-        cin>>arr[i];
-    }
-     for(int i=0;i<3;i++){
-        cout<<arr[i]<<" ";
-    }
-    
-    sshort(arr,3);
-    cout<<"shorted array"<<endl;
-     for(int i=0;i<3;i++){
-        cout<<arr[i]<<" ";
-    }
+
+int main() {
+    int a, b;
+    cout << "Enter the numbers 1st and nth: ";
+    cin >> a >> b;
+    rangee(a, b);
+    return 0;
 }
