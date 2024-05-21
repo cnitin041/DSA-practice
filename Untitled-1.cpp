@@ -1,18 +1,24 @@
 #include<iostream>
-#include<vector>
 using namespace std;
 
-vector<int> rangee(int a, int b) {
-    vector<int> arr;
+void rangee(int a, int b) {
+    // Determine the maximum possible size of the array
+    int maxSize = (b - a) / 2 + 1;
+    int arr[maxSize];
+    int count = 0;
+
+    // Populate the array with even numbers in the range [a, b)
     for (int i = a; i < b; i++) {
         if (i % 2 == 0) {
-            arr.push_back(i);
+            arr[count] = i;
+            count++;
         }
     }
-    for (int i = 0; i < arr.size(); i++) {
+
+    // Print the elements of the array
+    for (int i = 0; i < count; i++) {
         cout << arr[i] << endl;
     }
-    return arr;
 }
 
 int main() {
