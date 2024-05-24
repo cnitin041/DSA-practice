@@ -12,7 +12,7 @@ void shortt(int arr[], int n) {
     }
 }
 int main(){
-    int arr[7]={0,1,0,0,1,1,0};
+    int arr[7]={0,1,2,0,1,2,0};
     shortt(arr,7);
     cout<<endl;
     for(int i=0;i<7;i++){
